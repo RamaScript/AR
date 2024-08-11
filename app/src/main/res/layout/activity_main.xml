@@ -68,6 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <com.google.android.material.tabs.TabLayout
+            android:id="@+id/mainTab"
             android:layout_width="match_parent"
             android:layout_height="40dp">
 
@@ -82,6 +83,12 @@
                 android:text="Last Year" />
 
         </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/mainViewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
