@@ -1,6 +1,8 @@
 package com.example.arapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
         mainTab.setupWithViewPager(mainVP);
 
         VPadapter vpAdapter = new VPadapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        vpAdapter.addFragment(new currentYearFragment(),"CurrentYear");
-        vpAdapter.addFragment(new lastYearFragment(),"LastYear");
+        vpAdapter.addFragment(new currentYearFragment(),"Current Year");
+        vpAdapter.addFragment(new lastYearFragment(),"Last Year");
         mainVP.setAdapter(vpAdapter);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -39,5 +41,10 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public void openForm(View v){
+        Intent iForm = new Intent(this,addPolicyForm.class);
+        startActivity(iForm);
     }
 }

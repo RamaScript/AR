@@ -5,31 +5,35 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="@color/LightBackgroundColor"
     tools:context=".MainActivity">
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="100sp"
-        android:layout_margin="12sp"
+        android:layout_margin="8dp"
         android:background="@drawable/rounded_background"
-        android:backgroundTint="@color/primaryColor"
-
+        android:backgroundTint="@color/white"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/personImg"
-            android:layout_width="202sp"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:layout_margin="4dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/person" />
+
+            android:src="@drawable/person" />
+
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="8sp"
@@ -38,31 +42,38 @@
 
             <TextView
                 android:id="@+id/personName"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5sp"
-                android:text="Ramanand Kumar Gupta"
-
-                android:textColor="@color/white"
-                android:textSize="22sp" />
+                android:fontFamily="@font/poppins"
+                android:text="Rajesh Singh Chauhan"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/personCountry"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="24sp"
                 android:alpha="0.9"
-                android:text="India"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:drawableStart="@drawable/burjarab"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center_vertical"
+                android:text="Dubai"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
         </LinearLayout>
+
+
+
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_margin="8dp"
         android:orientation="vertical"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
@@ -70,6 +81,9 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/mainTab"
             android:layout_width="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
             android:layout_height="40dp">
 
             <com.google.android.material.tabs.TabItem
@@ -87,8 +101,11 @@
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/mainViewpager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
 
     </LinearLayout>
+
+    
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

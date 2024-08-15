@@ -13,7 +13,7 @@
         android:id="@+id/cardView"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
+        android:layout_margin="12dp"
         android:layout_marginTop="628dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
@@ -26,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
+
             android:orientation="vertical">
 
             <TextView
@@ -33,15 +34,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:fontFamily="@font/poppins"
                 android:text="No. of Policies"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/latYearNoOfPolicies"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="73"
-                android:textSize="40sp" />
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="24sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -49,7 +52,7 @@
         android:id="@+id/cardView2"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
+        android:layout_margin="12dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,27 +72,20 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="Gross Total"
-                android:textSize="20sp" />
+                android:fontFamily="@font/poppins"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/lastYearGrossTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="80000"
-                android:textSize="40sp" />
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="24sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Policy Renewal"
-        android:textSize="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
